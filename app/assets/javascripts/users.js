@@ -7,7 +7,7 @@ $(document).on('turbolinks:load', function(){
   //Set Stripe public key.
   Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
   
-  //When user clicks for submit btn,
+  //When user clicks form submit btn,
   submitBtn.click(function(event){
     //Prevent default submission behavior.
     event.preventDefault();
@@ -48,7 +48,7 @@ $(document).on('turbolinks:load', function(){
         
       //Send the card info to Stripe.
       Stripe.createToken({
-       number: ccNum,
+        number: ccNum,
         cvc: cvcNum,
         exp_month: expMonth,
         exp_year: expYear
